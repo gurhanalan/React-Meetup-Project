@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 
-const DUMMY_DATA = [
+/* const DUMMY_DATA = [
     {
         id: "m1",
         title: "This is a first meetup",
@@ -18,7 +18,7 @@ const DUMMY_DATA = [
         description:
             "This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!",
     },
-];
+];  */
 
 const AllMeetups = () => {
     const [loadedMeetups, setLoadedMeetups] = useState([]);
