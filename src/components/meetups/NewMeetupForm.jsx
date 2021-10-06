@@ -1,11 +1,16 @@
 import React, { useRef } from "react";
+// import { useHistory } from "react-router-dom";
+
 import Card from "../ui/Card";
 import styles from "./newMeetupForm.module.css";
-const NewMeetupForm = () => {
+
+const NewMeetupForm = (props) => {
     const titleInput = useRef();
     const imageInput = useRef();
     const addressInput = useRef();
     const descriptionInput = useRef();
+
+    // let history = useHistory();
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -16,7 +21,10 @@ const NewMeetupForm = () => {
             description: descriptionInput.current.value,
         };
 
-        console.log(meetupData);
+        // console.log(meetupData);
+        props.onAddMeetup(meetupData);
+
+        // history.push("/");
     };
 
     return (
